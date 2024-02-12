@@ -4,15 +4,16 @@ CFN template to manage DataSync jobs across 3 different accounts (DS resources, 
 CFTs needed to automate the DataSync task creation for Customer’s scenario of 3 accounts (DataSync administration account, source bucket account, destination bucket account). The templates factor in the KMS encryption of your S3 buckets
 
 The CFTs span across 3 accounts:
-Account 1 – DataSync resources
-Account 2 – Source S3 Bucket
-Account 3 – Destination S3 Bucket
+- Account 1 – DataSync resources
+* Account 2 – Source S3 Bucket
++ Account 3 – Destination S3 Bucket
  
+
 There are 4 CFTs uploaded at the above location:
-Account 1 - CFT to create DataSync Policies to copy S3 data and encrypt/decrypt using KMS keys. Attach the policies to a IAM role.
-Account 2 – CFT to create S3 bucket policy
-Account 3 – CFT to create S3 bucket policy
-Account 1 – CFT to create DataSync location and task
+- Account 1 - CFT to create DataSync Policies to copy S3 data and encrypt/decrypt using KMS keys. Attach the policies to a IAM role.
+* Account 2 – CFT to create S3 bucket policy
++ Account 3 – CFT to create S3 bucket policy
+- Account 1 – CFT to create DataSync location and task
  
 Currently, we couldn’t find a CFT for updating KMS key policy. You will have to get the Account 1 and Account 2 folks update them manually.
 ```
